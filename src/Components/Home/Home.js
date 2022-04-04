@@ -40,13 +40,18 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-100 mx-auto mt-10 mb-10">
-        <div className="grid grid-cols-4 gap-4">
-          {reviews.slice(0, 3).map((review) => (
-            <Review review={review} key={review.id}></Review>
-          ))}
-        </div>
+      <div className="grid grid-cols-4 gap-4 mx-auto mt-10 mb-10">
+        {reviews.slice(0, 3).map((review) => (
+          <Review review={review} key={review.id}></Review>
+        ))}
       </div>
+
+      <Link
+        to="/reviews"
+        className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+      >
+        All Reviews
+      </Link>
     </section>
   );
 };

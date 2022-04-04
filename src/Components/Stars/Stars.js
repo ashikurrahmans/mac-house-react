@@ -1,3 +1,5 @@
 import { FaStar } from "react-icons/fa";
 
-const Stars = () => {};
+const Stars = (rating) => {};
+
+export default Stars;

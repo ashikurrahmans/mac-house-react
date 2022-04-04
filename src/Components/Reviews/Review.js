@@ -2,7 +2,7 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 
 const Review = (props) => {
-  const { name, ReviewDetials, image, rating } = props.review;
+  const { name, ReviewDetials, image } = props.review;
 
   return (
     <div>
@@ -22,7 +22,13 @@ const Review = (props) => {
                 {name}
               </h5>
 
-              <FaStar></FaStar>
+              <div className="flex text-yellow-500">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+              </div>
               <span className="text-sm text-gray-500 dark:text-gray-400">
                 Visual Designer
               </span>

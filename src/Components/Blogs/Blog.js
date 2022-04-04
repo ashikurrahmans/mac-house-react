@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Blog = () => {
   return (
-    <div>
+    <section>
       <div className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2 max-w-6xl">
         <div className="flex flex-col bg-gray-200 rounded-lg p-4 m-2">
           <div className="h-60 bg-gray-400 rounded-lg w-500">
@@ -74,7 +74,7 @@ const Blog = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
