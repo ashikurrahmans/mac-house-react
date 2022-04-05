@@ -1,4 +1,4 @@
-This is website has been created using few technology. All of are listed below :
+This website has been created using few technology. All of are listed below :
 
 - Javascript **React Library** for fronted technology.
 - I Used **Tailwind CSS** for desiging the fronten style.
