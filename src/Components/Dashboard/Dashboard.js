@@ -6,6 +6,9 @@ import {
   XAxis,
   YAxis,
   Tooltip,
+  BarChart,
+  Legend,
+  Bar,
 } from "recharts";
 
 const data = [
@@ -18,11 +21,24 @@ const data = [
   { name: "Nosta Logic", age: 29, role: 13, earning: 3400 },
   { name: "Ashraful islam", age: 13, role: 18, earning: 1400 },
 ];
+
+const population = [
+  { city: "Dhaka", age: 0, sex: 1, people: 1483789 },
+  { city: "Rajsahi", age: 0, sex: 2, people: 1450376 },
+  { city: "Bogura", age: 5, sex: 2, people: 1359668 },
+  { city: "Jamalpu", age: 5, sex: 1, people: 1411067 },
+  { city: "Cumilla", age: 10, sex: 1, people: 1260099 },
+  { city: "Sylhet", age: 10, sex: 2, people: 1216114 },
+  { city: "Rongpur", age: 15, sex: 1, people: 1077133 },
+  { city: "Jalokathi", age: 15, sex: 2, people: 1110619 },
+  { city: "Noakhali", age: 20, sex: 1, people: 1017281 },
+];
+
 const Dashboard = () => {
   return (
-    <div>
+    <div className="grid md:grid-cols-2 grid-cols-1">
       <LineChart
-        width={600}
+        width={700}
         height={400}
         data={data}
         margin={{ top: 50, right: 20, bottom: 5, left: 0 }}
@@ -33,6 +49,17 @@ const Dashboard = () => {
         <YAxis />
         <Tooltip />
       </LineChart>
+
+      <BarChart width={700} height={400} data={population}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Bar dataKey="pv" fill="#8884d8" />
+        <Bar dataKey="uv" fill="red" />
+      </BarChart>
+
+      {/* Area Chart Start  */}
     </div>
   );
 };
